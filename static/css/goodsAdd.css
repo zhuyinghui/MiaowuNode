@@ -1,0 +1,19 @@
+.content .menu_item .addlist{
+  height: 400px;width: 500px;
+  display: flex;flex-direction: column;justify-content: space-around;
+  margin-left: 20px;
+}
+.content .menu_item .addlist div{
+  display: flex;align-items: center;
+}
+.content .menu_item .addlist input{
+ height:30px;width: 200px;margin: 5px;
+}
+.content .menu_item .addlist textarea{
+  height: 100px;width: 200px;
+}
+.content .menu_item .addlist button{
+  width: 82px;height: 32px;background: #cc0033;
+  color: white;border: none;border-radius: 5px;
+  margin-left: 50px;cursor: pointer;
+}

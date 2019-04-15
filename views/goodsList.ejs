@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+  <link rel="stylesheet" href="css/goodsList.css">
+  <link rel="stylesheet" href="css/goodsManage.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="logo"><font>Miaowu</font></div>
+    <div class="welcome">欢迎进入喵呜网后台管理！ <a href="/"> 【退出登录】</a> </div>
+  </div>
+  <div class="content">
+    <%include public/goodsManage.ejs%>
+    <div class="menu_item">
+      <div class="title">商品管理 / 商品列表</div>
+      <div class="search"><input type="text" placeholder="请输入要搜索的商品名称"><button>搜索</button></div>
+      <ul class="listname">
+        <li>序号</li>
+        <li>类别编号</li>
+        <li>商品名称</li>
+        <li>图片</li>
+        <li>价格</li>
+        <li>库存</li>
+        <li>特征</li>
+        <li>配送费</li>
+        <li>操作</li>
+      </ul>
+      <%for(var i=0;i<gl.length;i++){%>
+      <ul class="listdetail">
+        <li><%=i+1%></li>
+        <li><%=gl[i].classid%></li>
+        <li><%=gl[i].name%></li>
+        <li><img src="<%=gl[i].picture%>" style="width: 60px;height: 60px;padding-top: 5px"></li>
+        <li><%=gl[i].price%>元</li>
+        <li><%=gl[i].inventory%></li>
+        <li><%=gl[i].feature%></li>
+        <li><%=gl[i].postage%>元</li>
+        <li><a href="/goodsList/do_goodsDel?id=<%=gl[i]._id%>&imgName=<%=gl[i].picture%>">删除</a> </li>
+      </ul>
+      <%}%>
+    </div>
+  </div>
+</div>
+</body>
+</html>

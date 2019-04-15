@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>商品添加</title>
+  <link rel="stylesheet" href="css/goodsAdd.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="logo"><font>Miaowu</font></div>
+    <div class="welcome">欢迎进入喵呜网后台管理！ <a href="/"> 【退出登录】</a> </div>
+  </div>
+  <div class="content">
+    <%include public/goodsManage.ejs%>
+    <div class="menu_item">
+      <div class="title">商品管理 / 商品添加</div>
+      <form action="/goodsAdd/do_goodsAdd" method="post" enctype="multipart/form-data" class="addlist">
+          <div>类别编号：
+            <select name="class_id">
+              <%for(var i=0;i<50;i++){%>
+              <option value="<%=i%>"><%=i%></option>
+              <%}%>
+            </select>
+          </div>
+          <div>名称：<input type="text" name="goods_name"></div>
+          <div>图片：<input type="file" name="goods_img"></div>
+          <div>价格：<input type="text" name="goods_price"></div>
+          <div>库存：<input type="text" name="goods_inventory"></div>
+          <div>描述：<textarea name="goods_feature"></textarea></div>
+          <div>邮费：<input type="text" name="goods_postage"></div>
+          <button>添加</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

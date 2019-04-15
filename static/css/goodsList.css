@@ -1,0 +1,27 @@
+
+.content .menu_item .search input{
+  width: 221px;height: 32px;margin:20px 10px 30px 20px;
+}
+.content .menu_item .search button{
+  width: 104px;height: 32px;background: #cc0033;color: white;
+  border: none;
+}
+.content .menu_item .listname,.content .menu_item .listdetail{
+  width: 100%;display: flex;margin-left: 20px;
+}
+.content .menu_item .listname li,.content .menu_item .listdetail li{
+  width: 12%;text-align: center;line-height: 30px;
+  list-style: none;font-size: 13px;
+}
+.content .menu_item .listname li,.content .menu_item .listdetail li img{
+  height: 50px;height: 50px;
+}
+.content .menu_item .listname li{
+  background: black;color: white;
+}
+.content .menu_item .listdetail li{
+ border-bottom: black 1px solid;
+}
+.content .menu_item .listdetail li a{
+  text-decoration: none;color: red;font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>商品分类添加</title>
+  <link rel="stylesheet" href="css/goodsAdd.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="logo"><font>Miaowu</font></div>
+    <div class="welcome">欢迎进入喵呜网后台管理！ <a href="/adminSystem"> 【退出登录】</a> </div>
+  </div>
+  <div class="content">
+    <%include public/goodsManage.ejs%>
+    <div class="menu_item">
+      <div class="title">分类管理 / 添加分类</div>
+      <form action="/classAdd/do_classAdd" method="post" class="addlist" enctype="multipart/form-data" >
+        <div>类别编号：<input type="text" name="classid"> </div>
+        <div>类别名称：<input type="text" name="classname"></div>
+        <div>品种图片：<input type="file" name="classimg"></div>
+        <div>概述：<textarea name="summarize"></textarea></div>
+        <div>体型：
+          <select name="somatotype">
+            <option value="小型">小型</option>
+            <option value="中型">中型</option>
+            <option value="大型">大型</option>
+          </select>
+        </div>
+        <div>毛长：
+          <select name="furlength">
+            <option value="长毛">长毛</option>
+            <option value="短毛">短毛</option>
+          </select>
+        </div>
+        <button>添加</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

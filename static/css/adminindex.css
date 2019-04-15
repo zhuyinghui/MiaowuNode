@@ -1,0 +1,60 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background: black;
+}
+.content{
+    width: 100%;
+    background: black;
+}
+.nav{
+    width: 100%;height: 57px;background: black;
+    display: flex;justify-content: space-between;
+    color: white;
+}
+.nav .logo{
+    font-size: 40px;font-family: "Segoe Script";
+    margin-left: 40px;
+}
+.nav .headlist{
+    display: flex;margin-right: 40px;
+}
+.headlist li{
+    list-style: none;width: 100px;height: 100%;
+    text-align: center;line-height: 58px;
+}
+.headlist li a{
+    text-decoration: none;font-size: 16px;color: white;
+}
+.headlist li:hover{
+    background: #282828;
+}
+.container{
+    width: 100%;height: 427px;
+    background: url("../images/indexBack2.jpg") 0 -150px;
+    display: flex;flex-direction: column;align-items: center;
+    padding-top: 170px;
+}
+.container .twobtn a:first-child{
+    width: 213px;height: 51px;background: #cc0033;color: white;
+    font-family: Impact;font-size: 28px;border-radius: 4px;
+    border: 1px solid #cc0033;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.container .twobtn a:first-child:hover{
+    border: 1px solid white;
+}
+.container .twobtn a:last-child{
+    width: 304px;height: 51px;background: white;color: #cc0033;
+    font-family: Impact;font-size: 28px;border-radius: 4px;border: none;
+    border: 1px solid white;
+    text-decoration: none;
+    margin-left: 30px;
+    padding: 10px 20px;
+}
+.container .twobtn a:last-child:hover{
+    border: 1px solid #cc0033;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>商品分类</title>
+  <link rel="stylesheet" href="css/goodsList.css">
+  <link rel="stylesheet" href="css/goodsManage.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="logo"><font>Miaowu</font></div>
+    <div class="welcome">欢迎进入喵呜网后台管理！ <a href="/"> 【退出登录】</a> </div>
+  </div>
+  <div class="content">
+    <%include public/goodsManage.ejs%>
+    <div class="menu_item">
+      <div class="title">分类管理 / 分类列表</div>
+      <div class="search"><input type="text" placeholder="请输入要搜索的商品名称"><button>搜索</button></div>
+      <ul class="listname">
+        <li>类别编号</li>
+        <li>类别名称</li>
+        <li>品种图片</li>
+        <li>概述</li>
+        <li>体型</li>
+        <li>毛长</li>
+        <li>操作</li>
+      </ul>
+      <%for(var i=0;i<gc.length;i++){%>
+      <ul class="listdetail">
+        <li><%=gc[i].classid%></li>
+        <li><%=gc[i].classname%></li>
+        <li><img src="<%=gc[i].classimg%>"></li>
+        <li><%=gc[i].summarize%></li>
+        <li><%=gc[i].somatotype%></li>
+        <li><%=gc[i].furlength%></li>
+        <li><a href="/goodsClass/do_classDel?id=<%=gc[i]._id%>&imgName=<%=gc[i].classimg%>">删除</a> </li>
+      </ul>
+      <%}%>
+    </div>
+  </div>
+</div>
+</body>
+</html>
