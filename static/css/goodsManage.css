@@ -24,7 +24,7 @@
   text-align: center;line-height: 49px;
   margin-left: 50px;
 }
-.content .menu li:first-child,.content .menu li:nth-child(4){
+.content .menu li:first-child,.content .menu li:nth-child(4),.content .menu li:nth-child(7){
   background: #cc0033;
 }
 .content .menu li a{

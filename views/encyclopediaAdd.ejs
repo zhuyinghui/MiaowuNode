@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>猫百科添加</title>
+  <link rel="stylesheet" href="/css/goodsAdd.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="logo"><font>Miaowu</font></div>
+    <div class="welcome">欢迎进入喵呜网后台管理！ <a href="/"> 【退出登录】</a> </div>
+  </div>
+  <div class="content">
+    <%include public/goodsManage.ejs%>
+    <div class="menu_item">
+      <div class="title">猫百科管理 / 百科添加</div>
+      <form action="/encyclopedia/do_add" method="post" enctype="multipart/form-data" class="addlist">
+          <div>类别编号：
+            <select name="class_id">
+              <%for(var i=0;i<50;i++){%>
+                <option value="<%=i%>"><%=i%></option>
+              <%}%>
+            </select>
+          </div>
+          <div>品种简介：<textarea name="encyc1"></textarea></div>
+          <div>形态特征：<textarea name="encyc2"></textarea></div>
+          <div>性格特点：<textarea name="encyc3"></textarea></div>
+          <div>养护知识：<textarea name="encyc4"></textarea></div>
+          <div>喂食要点：<textarea name="encyc5"></textarea></div>
+          <button class="btn">添加</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

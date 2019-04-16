@@ -3,13 +3,13 @@ var router=express.Router();
 var DB=require('../../module/connectMongo');
 
 
-router.use(function (req,res,next) {
-  if(global.adminInfo){
-    next()
-  }else{
-    res.redirect('/adminLogin')
-  }
-});
+// router.use(function (req,res,next) {
+//   if(global.adminInfo){
+//     next()
+//   }else{
+//     res.redirect('/adminLogin')
+//   }
+// });
 
 router.get('/',function (req,res) {
   res.render('classAdd');

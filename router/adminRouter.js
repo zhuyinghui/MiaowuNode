@@ -13,6 +13,14 @@ router.get('/',function (req,res) {
 var adminLogin=require('./adminRouter/adminLogin');
 router.use('/adminLogin',adminLogin);
 
+// router.use(function (req,res,next) {
+//   if(global.adminInfo){
+//     next()
+//   }else{
+//     res.redirect('/adminLogin')
+//   }
+// });
+
 //注册
 // var adminRegister=require('./adminRouter/adminRegister');
 // router.use('/adminRegister',adminRegister);
@@ -32,5 +40,9 @@ router.use('/classAdd',classAdd);
 // //显示商品分类列表，删除分类
 var goodsClass=require('./adminRouter/goodsClass');
 router.use('/goodsClass',goodsClass);
+
+//添加、删除、显示百科
+let encyclopedia=require('./adminRouter/encyclopedia')
+router.use('/encyclopedia',encyclopedia)
 
 module.exports=router;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猫百科列表</title>
+  <link rel="stylesheet" href="css/goodsList.css">
+  <link rel="stylesheet" href="css/goodsManage.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="logo"><font>Miaowu</font></div>
+    <div class="welcome">欢迎进入喵呜网后台管理！ <a href="/"> 【退出登录】</a> </div>
+  </div>
+  <div class="content">
+    <%include public/goodsManage.ejs%>
+    <div class="menu_item">
+      <div class="title">猫百科管理 / 百科列表</div>
+      <div class="search"><input type="text" placeholder="请输入要搜索的商品名称"><button>搜索</button></div>
+      <ul class="listname">
+        <li>序号</li>
+        <li>类别编号</li>
+        <li>品种简介</li>
+        <li>形态特征</li>
+        <li>性格特点</li>
+        <li>养护知识</li>
+        <li>喂食要点</li>
+        <li>操作</li>
+      </ul>
+      <%for(var i=0;i<el.length;i++){%>
+      <ul class="listdetail">
+        <li><%=i+1%></li>
+        <li><%=el[i].classid%></li>
+        <li><%=el[i].variaty%></li>
+        <li><%=el[i].form%></li>
+        <li><%=el[i].character%></li>
+        <li><%=el[i].nurse%></li>
+        <li><%=el[i].feed%></li>
+        <li><a href="/encyclopedia/do_del?id=<%=el[i].classid%>">删除</a> </li>
+      </ul>
+      <%}%>
+    </div>
+  </div>
+</div>
+</body>
+</html>
