@@ -11,6 +11,8 @@ router.use('/evaluateInfo',require('./evaluateInfo'));
 
 router.use('/orderForm',require('./orderForm'));
 
-router.use('/encyclopediaInfo',require('./encyclopediaInfo'))
+router.use('/encyclopediaInfo',require('./encyclopediaInfo'));
+
+router.use('/adoptInfo',require('./adoptInfo'));
 
 module.exports=router;
