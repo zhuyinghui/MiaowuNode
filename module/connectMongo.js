@@ -20,7 +20,6 @@ exports.find=function (collectionname,condition,callback) {
     var result=db.collection(collectionname).find(condition);
     result.toArray(function (err,data) {
       callback(err,data) //返回err,data给find
-      // client.close()
     })
   })
 };
@@ -63,4 +62,18 @@ exports.update=(collectionname,condition,updateStr,callback)=>{
       }
     })
   }))
+};
+
+//查询指定表的记录数
+exports.counts=(collectionname,condition,callback)=>{
+  connectMongo(db=>{
+      let num=db.collection(collectionname).find(condition).count((err,data)=>{
+        if(err){
+          console.log('获取记录数失败')
+        }else{
+          callback(err,data)  
+        }
+      })
+      
+  })
 }
