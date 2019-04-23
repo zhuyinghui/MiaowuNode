@@ -9,6 +9,10 @@ router.get('/',function (req,res) {
   res.render('adminindex')
 });
 
+router.get('/resume',function (req,res) {
+  res.render('resume')
+});
+
 //登录
 var adminLogin=require('./adminRouter/adminLogin');
 router.use('/adminLogin',adminLogin);
