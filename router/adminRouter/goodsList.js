@@ -3,13 +3,13 @@ var router=express.Router();
 var DB=require('../../module/connectMongo');
 var fs=require('fs');
 
-// router.use(function (req,res,next) {
-//   if(global.adminInfo){
-//     next()
-//   }else{
-//     res.redirect('/adminLogin')
-//   }
-// });
+router.use(function (req,res,next) {
+  if(global.adminInfo){
+    next()
+  }else{
+    res.redirect('/adminLogin')
+  }
+});
 
 //商品列表模块
 router.get('/',function (req,res) {
